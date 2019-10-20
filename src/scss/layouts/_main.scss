@@ -1,0 +1,75 @@
+.nav {
+    position: relative;
+    background-color: $white;
+    width: 100%;
+    height: auto;
+    padding: 25px;
+    box-shadow: 0 0 25px 5px $mine-shaft-50;
+    z-index: 9999;
+
+    &__title {
+        font-weight: 700;
+    }
+}
+
+.header {
+    position: relative;
+    background-color: $zest;
+    width: 100%;
+    height: 500px;
+
+    &__image {
+        position: absolute;
+        background-image: url('https://scontent-sin2-1.xx.fbcdn.net/v/t1.0-9/73107418_2482980762025355_2225836285409361920_n.jpg?_nc_cat=101&_nc_oc=AQn-WfxRWVQGjRP4NEOBCwk43hl53wnrN5IyNdT_atvfq7gy9Iv9V9tK8y1kzrnw9eE&_nc_pt=1&_nc_ht=scontent-sin2-1.xx&oh=352576cd16c859b10f42fc429ce0ebfa&oe=5E246E90');
+        background-position: center center;
+        background-size: cover;
+        width: 300px;
+        height: 100%;
+        top: 0;
+        left: 80px;
+        bottom: 0;
+    }
+
+    &__information {
+        position: absolute;
+        display: flex;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        right: 80px;
+        bottom: 0;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        &--container {
+            flex: 1 0;
+
+            & > h1 {
+                font-family: 'Oswald', sans-serif;
+                color: $bunker;
+                text-align: center;
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                padding: 0;
+                margin: 0;
+            }
+
+            & > h2 {
+                font-size: 1rem;
+                font-style: oblique;
+                font-weight: 400;
+                text-align: center;
+                color: $bunker;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.section {
+    background-color: $white;
+    width: 100%;
+    height: auto;
+}
