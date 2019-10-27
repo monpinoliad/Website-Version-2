@@ -1,6 +1,6 @@
 .nav {
     display: inline-block;
-    position: relative;
+    position: fixed;
     background-color: $white;
     width: 100%;
     height: 70px;
@@ -41,6 +41,11 @@
                 }
             }
 
+
+            .active {
+                border: 2px solid $mine-shaft;
+            }
+            
             & > a > .highlight {
                 background-color: $mine-shaft;
                 width: auto;
@@ -58,7 +63,9 @@
     position: relative;
     background-color: $zest;
     width: 100%;
-    height: 500px;
+    height: 570px;
+    padding: 70px 0 0 0;
+    overflow: hidden;
 
     &__image {
         position: absolute;
@@ -67,7 +74,7 @@
         background-size: cover;
         width: 300px;
         height: 100%;
-        top: 0;
+        top: 70px;
         left: 80px;
         bottom: 0;
     }
@@ -118,6 +125,7 @@
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
+    overflow: auto;
 
     &__container {
         display: flex;
@@ -130,8 +138,8 @@
             background-position: center center;
             background-repeat: no-repeat;
             background-size: contain;
-            width: 300px;
-            height: 300px;
+            width: 150px;
+            height: 150px;
     
         }
 
@@ -149,12 +157,187 @@
             font-size: 1.1rem;
             font-weight: 400;
             text-align: center;
-            padding: 10px 20px;
+            padding: 10px 50px;
             margin: 0;
+        }
+    }
+
+    &__curve {
+        position: relative;
+        width: 100%;
+        height: 100px;
+
+        .curve-top {
+            position: absolute;
+            background-color: $white;
+            width: 100%;
+            height: 100px;
+            top: -60px;
+            right: 0;
+            left: 0;
+            border-radius: 50%/0 0 30pt 30pt;
+            box-shadow: 0 7.5pt 10pt -5pt #6d6a6a;
+        }
+    }
+
+    &__paragraph-large {
+        line-height: 2.5rem;
+        font-size: 1.35rem;
+        text-align: center;
+        padding: 80px;
+    }
+}
+
+.project-section {
+    display: inline-block;
+    background-color: $white;
+    width: 100%;
+
+    &__header {
+        width: 100%;
+        font-size: 2rem;
+        font-family: 'Oswald', sans-serif;
+        text-align: center;
+        padding: 70px 0;
+        margin: 0;
+    }
+
+    &__content {
+        display: flex;
+        width: 100%;
+        height: auto;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        
+        &--item {
+            height: 350px;
+            flex: 0 50%;
+            position: relative;
+            background-position: center center;
+            background-size: cover;
+            background-clip: padding-box;
+            border: 10px solid $white;
+            padding: 15px;
+
+            &__shadow {
+                background-color: rgba(0, 0, 0, 0.75);
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                transition: 250ms;
+
+                & > h1 {
+                    flex: 1 0;
+                    font-size: 1.5rem;
+                    color: #FFFFFF;
+                    text-transform: uppercase;
+                    text-align: center;
+                    padding: 0 20px;
+                    margin: 0;
+                }
+            }
+
+            &:hover > &__shadow {
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                transition: 250ms;
+            }
         }
     }
 }
 
 .full-height {
     height: 100vh;
+}
+
+.gradient {
+    background-image: radial-gradient(circle,#fff,#dedede);
+}
+
+.shadow-box {
+    box-shadow: 0 7.5pt 10pt -5pt #c9c9c9;
+}
+
+.footer {
+    display: flex;
+    background-color: $white;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    &__content {
+        display: flex;
+        flex: 1 50%;
+        height: 300px;
+        padding: 50px;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+
+        &--box {
+            width: 100%;
+            padding: 5px 0;
+
+            & > h1 {
+                flex: 1;
+                font-size: 1.5rem;
+                text-align: center;
+                padding: 20px 0;
+                margin: 0;
+            }
+    
+            & > h2 {
+                flex: 1;
+                font-size: 1rem;
+                font-weight: 400;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+
+            &__row {
+                width: 100%;
+                float: left;
+
+                &--icon {
+                    background-position: 50%;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 40px;
+                    height: 40px;
+                    margin: 0 20px 0 0;
+                    float: left;
+                }
+
+                &--text {
+                    line-height: 40px;
+                    font-size: 1.15rem;
+                    float: left
+                }
+            }
+        }
+    }
+}
+
+.copyright {
+    display: inline-block;
+    background-color: $mine-shaft;
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    text-align: center;
+    color: $white;
+    
+
+    a {
+        border-bottom: 2px dashed $white;
+    }
 }
