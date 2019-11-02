@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.887db7f3.chunk.css",
+    "main.js": "/static/js/main.5905c8b2.chunk.js",
+    "main.js.map": "/static/js/main.5905c8b2.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3664b334.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3664b334.js.map",
+    "static/js/2.b0dfc117.chunk.js": "/static/js/2.b0dfc117.chunk.js",
+    "static/js/2.b0dfc117.chunk.js.map": "/static/js/2.b0dfc117.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.126a1422861fc4ad2579b24c7952aac2.js": "/precache-manifest.126a1422861fc4ad2579b24c7952aac2.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.887db7f3.chunk.css.map": "/static/css/main.887db7f3.chunk.css.map",
+    "static/media/PINOLIAD_RESUME_REAL_october28-19.pdf": "/static/media/PINOLIAD_RESUME_REAL_october28-19.3412fc8f.pdf",
+    "static/media/close-envelope.svg": "/static/media/close-envelope.89e02d41.svg",
+    "static/media/confident.svg": "/static/media/confident.f04ff9cb.svg",
+    "static/media/dynamic.svg": "/static/media/dynamic.11df930d.svg",
+    "static/media/elpower.png": "/static/media/elpower.e1ba864f.png",
+    "static/media/github-logo.svg": "/static/media/github-logo.944a4dd6.svg",
+    "static/media/instagram.svg": "/static/media/instagram.c6f60b42.svg",
+    "static/media/jimmy.png": "/static/media/jimmy.a4749764.png",
+    "static/media/linkedin-logo.svg": "/static/media/linkedin-logo.a1baa9e9.svg",
+    "static/media/motivated.svg": "/static/media/motivated.c05a87a4.svg",
+    "static/media/rey.png": "/static/media/rey.cac34133.png",
+    "static/media/smdi.png": "/static/media/smdi.c28c6a7a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3664b334.js",
+    "static/js/2.b0dfc117.chunk.js",
+    "static/css/main.887db7f3.chunk.css",
+    "static/js/main.5905c8b2.chunk.js"
+  ]
+}
