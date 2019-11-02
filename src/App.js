@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
 
 import MotivatedPhoto from './images/motivated.svg'
 import DynamicPhoto from './images/dynamic.svg'
@@ -112,46 +114,62 @@ class App extends React.Component {
           </div>
         </nav>
         <header className="header" id="home">
-          <div className="header__image"></div>
-          <div className="header__information">
-            <div className="header__information--container">
-              <h1>I am Sholomon Pinoliad</h1>  
-              <h2>Motivated, Outgoing, Confident</h2>
+          <Fade left>
+            <div className="header__image"></div>
+          </Fade>
+          <Fade right>
+            <div className="header__information">
+              <div className="header__information--container">
+                <h1>I am Sholomon Pinoliad</h1>  
+                <h2>Motivated, Outgoing, Confident</h2>
+              </div>
             </div>
-          </div>
+          </Fade>
         </header>
         <section className="section full-height">
-          <div className="section__container">
-            <img src={MotivatedPhoto} className="section__container--image" alt="logo" />
-          </div>
-          <div className="section__container">
-            <h1 className="section__container--h1">Motivated</h1>
-            <h2 className="section__container--h2">
-              Motivated in making things possible by turning visions into reality.
-            </h2>
-          </div>
+          <Fade left>
+            <div className="section__container">
+              <img src={MotivatedPhoto} className="section__container--image" alt="logo" />
+            </div>
+          </Fade>
+          <Fade right>
+            <div className="section__container">
+              <h1 className="section__container--h1">Motivated</h1>
+              <h2 className="section__container--h2">
+                Motivated in making things possible by turning visions into reality.
+              </h2>
+            </div>
+          </Fade>
         </section>
         <section className="section full-height">
-          <div className="section__container">
-            <img src={DynamicPhoto} className="section__container--image" alt="logo" />
-          </div>
-          <div className="section__container">
-            <h1 className="section__container--h1">Dynamic</h1>
-            <h2 className="section__container--h2">
-              I am a positive and energetic person who continuously learn something new.
-            </h2>
-          </div>
+          <Fade left>
+            <div className="section__container">
+              <img src={DynamicPhoto} className="section__container--image" alt="logo" />
+            </div>
+          </Fade>
+          <Fade right>
+            <div className="section__container">
+              <h1 className="section__container--h1">Dynamic</h1>
+              <h2 className="section__container--h2">
+                I am a positive and energetic person who continuously learn something new.
+              </h2>
+            </div>
+          </Fade>
         </section>
         <section className="section full-height">
-          <div className="section__container">
-            <img src={ConfidentPhoto} className="section__container--image" alt="logo" />
-          </div>
-          <div className="section__container">
-            <h1 className="section__container--h1">Confident</h1>
-            <h2 className="section__container--h2">
-              Confident enough with my skills to empower every person.
-            </h2>
-          </div>
+          <Fade left>
+            <div className="section__container">
+              <img src={ConfidentPhoto} className="section__container--image" alt="logo" />
+            </div>
+          </Fade>
+          <Fade right>
+            <div className="section__container">
+              <h1 className="section__container--h1">Confident</h1>
+              <h2 className="section__container--h2">
+                Confident enough with my skills to empower every person.
+              </h2>
+            </div>
+          </Fade>
         </section>
         <section className="section gradient" id="about">
           <div className="section__curve">
@@ -168,65 +186,77 @@ class App extends React.Component {
         <section className="project-section" id="projects">
           <h1 className="project-section__header">Projects and Stuffs</h1>
           <div className="project-section__content">
-            <div className="project-section__content--item" style={{ backgroundImage: `url(${ProjectSmdi})` }}>
-              <div className="project-section__content--item__shadow">
-                <h1>SMDI Website Development</h1>
+            <Zoom>
+              <div className="project-section__content--item" style={{ backgroundImage: `url(${ProjectSmdi})` }}>
+                <div className="project-section__content--item__shadow">
+                  <h1>SMDI Website Development</h1>
+                </div>
               </div>
-            </div>
-            <div className="project-section__content--item" style={{ backgroundImage: `url(${ProjectJimmy})` }}>
-              <div className="project-section__content--item__shadow">
-                <h1>Jimmys Lambanog Web Design</h1>
+            </Zoom>
+            <Zoom>
+              <div className="project-section__content--item" style={{ backgroundImage: `url(${ProjectJimmy})` }}>
+                <div className="project-section__content--item__shadow">
+                  <h1>Jimmys Lambanog Web Design</h1>
+                </div>
               </div>
-            </div>
-            <div className="project-section__content--item" style={{ backgroundImage: `url(${ProjectRey})` }}>
-              <div className="project-section__content--item__shadow">
-                <h1>Rey Industrial Web Design</h1>
+            </Zoom>
+            <Zoom>
+              <div className="project-section__content--item" style={{ backgroundImage: `url(${ProjectRey})` }}>
+                <div className="project-section__content--item__shadow">
+                  <h1>Rey Industrial Web Design</h1>
+                </div>
               </div>
-            </div>
-            <div className="project-section__content--item" style={{ backgroundImage: `url(${ProjectEl})` }}>
-              <div className="project-section__content--item__shadow">
-                <h1>El Power Tools Web Design</h1>
+            </Zoom>
+            <Zoom>
+              <div className="project-section__content--item" style={{ backgroundImage: `url(${ProjectEl})` }}>
+                <div className="project-section__content--item__shadow">
+                  <h1>El Power Tools Web Design</h1>
+                </div>
               </div>
-            </div>
+            </Zoom>
           </div>
         </section>
         <footer className="footer" id="contact">
-          <div className="footer__content">
-            <div className="footer__content--box">
-              <h1>Do you have more questions?</h1>
-              <h2>You can reach me out through my social media accounts or personal email.</h2>
-            </div>
-          </div>
-          <div className="footer__content">
-            <div className="footer__content--box">
-              <div className="footer__content--box__row">
-                
-                <img src={FooterEnvelope} className="footer__content--box__row--icon" alt="logo" />
-                <div className="footer__content--box__row--text">sholomon.pinoliad@gmail.com</div>
+          <Fade left>
+            <div className="footer__content">
+              <div className="footer__content--box">
+                <h1>Do you have more questions?</h1>
+                <h2>You can reach me out through my social media accounts or personal email.</h2>
               </div>
             </div>
-            <div className="footer__content--box">
-              <div className="footer__content--box__row">
-                
-                <img src={FooterLinkedin} className="footer__content--box__row--icon" alt="logo" />
-                <div className="footer__content--box__row--text">/sholomon</div>
+          </Fade>
+          <Fade right>
+            <div className="footer__content">
+              <div className="footer__content--box">
+                <div className="footer__content--box__row">
+                  
+                  <img src={FooterEnvelope} className="footer__content--box__row--icon" alt="logo" />
+                  <div className="footer__content--box__row--text">sholomon.pinoliad@gmail.com</div>
+                </div>
+              </div>
+              <div className="footer__content--box">
+                <div className="footer__content--box__row">
+                  
+                  <img src={FooterLinkedin} className="footer__content--box__row--icon" alt="logo" />
+                  <div className="footer__content--box__row--text">/sholomon</div>
+                </div>
+              </div>
+              <div className="footer__content--box">
+                <div className="footer__content--box__row">
+                  
+                  <img src={FooterInstagram} className="footer__content--box__row--icon" alt="logo" />
+                  <div className="footer__content--box__row--text">@heytransit</div>
+                </div>
+              </div>
+              <div className="footer__content--box">
+                <div className="footer__content--box__row">
+                  
+                  <img src={FooterGithub} className="footer__content--box__row--icon" alt="logo" />
+                  <div className="footer__content--box__row--text">/monpinoliad</div>
+                </div>
               </div>
             </div>
-            <div className="footer__content--box">
-              <div className="footer__content--box__row">
-                
-                <img src={FooterInstagram} className="footer__content--box__row--icon" alt="logo" />
-                <div className="footer__content--box__row--text">@heytransit</div>
-              </div>
-            </div>
-            <div className="footer__content--box">
-              <div className="footer__content--box__row">
-                
-                <img src={FooterGithub} className="footer__content--box__row--icon" alt="logo" />
-                <div className="footer__content--box__row--text">/monpinoliad</div>
-              </div>
-            </div>
-          </div>
+          </Fade>
         </footer>
         <footer className="copyright">
           &copy; Copyright 2019. All Rights Reserved. Icons from <strong><a href="https://www.flaticon.com/">Flaticon</a></strong>.
