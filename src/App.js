@@ -19,11 +19,30 @@ import Resume from './resume/PINOLIAD_RESUME_REAL_october28-19.pdf'
 class App extends React.Component {
 
   componentDidMount() {
+    let nav = document.querySelector(".nav__burger");
+    nav.addEventListener("click", this.navigator)
     document.addEventListener("scroll", this.scrollSpy, { passive: true })
+    window.addEventListener("resize", this.screenWidth, { passive: true })
   }
 
   componentWillUnmount() {
     document.removeEventListener('scroll', this.scrollSpy);
+  }
+
+  screenWidth(event) {
+    let navigation = document.querySelector(".nav__navigation")
+    if(window.innerWidth>968) 
+      navigation.classList.add("show_nav")
+    else
+      navigation.classList.remove("show_nav")
+  }
+
+  navigator(event) {
+    let navigation = document.querySelector(".nav__navigation")
+    if(!navigation.classList.contains("show_nav"))
+      navigation.classList.add("show_nav")
+    else
+      navigation.classList.remove("show_nav")
   }
  
   scrollSpy(event) {
@@ -85,6 +104,11 @@ class App extends React.Component {
                 <li className="highlight">Resume</li>
               </a>
             </ul>
+          </div>
+          <div className="nav__burger">
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </nav>
         <header className="header" id="home">

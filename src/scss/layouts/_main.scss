@@ -8,15 +8,66 @@
     box-shadow: 0 0 25px 5px $mine-shaft-50;
     z-index: 9999;
 
+    @media only screen and(max-width: 768px) {
+        height: auto;
+    }
+
+    &__burger {
+        display: none;
+        background-color: $mine-shaft;
+        position: absolute;
+        width: 50px;
+        height: auto;
+        padding: 10px;
+        top: 14px;
+        right: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        @media only screen and(max-width: 968px) {
+            display: block;
+        }
+
+        & > div {
+            background-color: $white;
+            width: 100%;
+            height: 4px;
+            border-radius: 5px;
+            float: left;
+
+            &:first-child {
+                margin-bottom: 5px;
+            }
+
+            &:last-child {
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .show_nav {
+        display: block;
+        transition: 250ms;
+    }
+
     &__title {
         font-weight: 700;
     }
 
     &__navigation {
+        display: block;
         position: absolute;
         right: 40px;
         top: 0;
+        transition: 250ms;
 
+        @media only screen and(max-width: 968px) {
+            display: none;
+            position: relative;
+            background-color: $white;
+            right: 0;
+            width: 100%;
+        }
 
         &--list {
             display: flex;
@@ -27,6 +78,13 @@
             margin: 0;
             flex-wrap: wrap;
             align-content: center;
+
+            @media only screen and(max-width: 768px) {
+                display: block;
+                height: auto;
+                padding: 40px 0;
+                overflow: auto;
+            }
     
             & > a > .items {
                 width: auto;
@@ -34,6 +92,12 @@
                 margin: 0 10px;
                 float: left;
                 flex: 1;
+
+                @media only screen and(max-width: 768px) {
+                    width: 100%;
+                    margin: 0;
+                    flex: 0;
+                }
     
                 &:hover {
                     background-color: $mine-shaft;
@@ -54,6 +118,12 @@
                 float: left;
                 flex: 1;
                 color: $white;
+
+                @media only screen and(max-width: 768px) {
+                    width: 100%;
+                    margin: 0;
+                    flex: 0;
+                }
             }
         }
     }
@@ -77,6 +147,16 @@
         top: 70px;
         left: 80px;
         bottom: 0;
+
+        @media only screen and(max-width: 968px) {
+            left: 0
+        }
+
+        @media only screen and(max-width: 568px) {
+            left: -100px;
+        }
+
+
     }
 
     &__information {
@@ -91,6 +171,10 @@
         justify-content: center;
         flex-wrap: wrap;
 
+        @media only screen and(max-width: 968px) {
+            right: 10px;
+        }
+
         &--container {
             flex: 1 0;
 
@@ -102,6 +186,10 @@
                 text-transform: uppercase;
                 padding: 0;
                 margin: 0;
+
+                @media only screen and(max-width: 568px) {
+                    font-size: 1.5rem;
+                }
             }
 
             & > h2 {
@@ -133,6 +221,12 @@
         justify-content: center;
         flex-wrap: wrap;
         flex: 1 0;
+
+        @media only screen and(max-width: 568px) {
+            width: 100%;
+            flex: 0;
+            float: left;
+        }
 
         &--image {
             background-position: center center;
@@ -208,6 +302,10 @@
         height: auto;
         align-content: flex-start;
         flex-wrap: wrap;
+
+        @media only screen and(max-width: 568px) {
+            display: block;
+        }
         
         &--item {
             height: 350px;
@@ -218,6 +316,13 @@
             background-clip: padding-box;
             border: 10px solid $white;
             padding: 15px;
+            
+
+            @media only screen and(max-width: 568px) {
+                width: 100%;
+                flex: 0;
+                float: left;
+            }
 
             &__shadow {
                 background-color: rgba(0, 0, 0, 0.75);
@@ -282,6 +387,10 @@
         align-content: center;
         justify-content: center;
 
+        @media only screen and(max-width: 568px) {
+            padding: 20px;
+        }
+
         &--box {
             width: 100%;
             padding: 5px 0;
@@ -320,7 +429,11 @@
                 &--text {
                     line-height: 40px;
                     font-size: 1.15rem;
-                    float: left
+                    float: left;
+
+                    @media only screen and(max-width: 568px) {
+                        font-size: 1rem;
+                    }
                 }
             }
         }
